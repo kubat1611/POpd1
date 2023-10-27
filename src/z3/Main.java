@@ -3,7 +3,7 @@ package z3;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Zadanie 3");
-        Smok smok = new Smok();
+        Smok smok = new  Smok();
 
         assert smok.getPunktyZycia() == 1000;
         assert smok instanceof Postac;
