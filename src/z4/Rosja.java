@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Rosja implements PanstwoAzjatyckie {
     private Kontynent kontynent = Kontynent.AZJA;
-    private int liczbaLudnosci = 146599183; // Przykładowa liczba ludności
+    private int liczbaLudnosci = 143400000;
     private String stolica = "Moskwa";
     private List<Panstwo> sasiedzi = new ArrayList<>();
 
@@ -36,6 +36,12 @@ public class Rosja implements PanstwoAzjatyckie {
 
     @Override
     public void migruj(Panstwo docelowePanstwo, int liczbaMigrantow) {
+        this.liczbaLudnosci -= liczbaMigrantow;
+        docelowePanstwo.setLiczbaLudnosci(docelowePanstwo.getLiczbaLudnosci() + liczbaMigrantow);
+    }
 
+    @Override
+    public void setLiczbaLudnosci(int i) {
+        this.liczbaLudnosci = i;
     }
 }

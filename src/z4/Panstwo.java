@@ -8,4 +8,6 @@ public interface Panstwo {
     String getStolica();
     List<Panstwo> getSasiedzi();
     void dodajSasiada(Panstwo sasiad);
+    void migruj(Panstwo docelowePanstwo, int liczbaMigrantow);
+    void setLiczbaLudnosci(int i);
 }

@@ -43,6 +43,11 @@ public class Kraj implements PanstwoEuropejskie, PanstwoAzjatyckie {
 
     @Override
     public void migruj(Panstwo docelowePanstwo, int liczbaMigrantow) {
-        // Implementacja migrowania ludności
+
+    }
+
+    @Override
+    public void setLiczbaLudnosci(int i) {
+
     }
 }

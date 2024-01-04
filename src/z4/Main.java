@@ -61,8 +61,10 @@ public class Main {
         ));
 
         rosja.migruj(polska, 1000000);
-
+        System.out.println(rosja.getLiczbaLudnosci());
+        System.out.println(polska.getLiczbaLudnosci());
         assert rosja.getLiczbaLudnosci() == 142400000;
+
         assert polska.getLiczbaLudnosci() == 38750000;
     }
 }

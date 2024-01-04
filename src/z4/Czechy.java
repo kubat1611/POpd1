@@ -33,4 +33,15 @@ public class Czechy implements PanstwoEuropejskie {
     public void dodajSasiada(Panstwo sasiad) {
         sasiedzi.add(sasiad);
     }
+
+    @Override
+    public void migruj(Panstwo docelowePanstwo, int liczbaMigrantow) {
+        this.liczbaLudnosci -= liczbaMigrantow;
+        docelowePanstwo.setLiczbaLudnosci(docelowePanstwo.getLiczbaLudnosci() + liczbaMigrantow);
+    }
+
+    @Override
+    public void setLiczbaLudnosci(int i) {
+        this.liczbaLudnosci = i;
+    }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Bialorus implements PanstwoEuropejskie {
     private Kontynent kontynent = Kontynent.EUROPA;
-    private int liczbaLudnosci = 9466000; // Przykładowa liczba ludności
+    private int liczbaLudnosci = 9466000;
     private String stolica = "Mińsk";
     private List<Panstwo> sasiedzi = new ArrayList<>();
 
@@ -32,5 +32,16 @@ public class Bialorus implements PanstwoEuropejskie {
     @Override
     public void dodajSasiada(Panstwo sasiad) {
         sasiedzi.add(sasiad);
+    }
+
+    @Override
+    public void migruj(Panstwo docelowePanstwo, int liczbaMigrantow) {
+        this.liczbaLudnosci -= liczbaMigrantow;
+        docelowePanstwo.setLiczbaLudnosci(docelowePanstwo.getLiczbaLudnosci() + liczbaMigrantow);
+    }
+
+    @Override
+    public void setLiczbaLudnosci(int i) {
+        this.liczbaLudnosci = i;
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Litwa implements PanstwoEuropejskie {
     private Kontynent kontynent = Kontynent.EUROPA;
-    private int liczbaLudnosci = 2793471; // Przykładowa liczba ludności
+    private int liczbaLudnosci = 2793471;
     private String stolica = "Wilno";
     private List<Panstwo> sasiedzi = new ArrayList<>();
 
@@ -32,5 +32,16 @@ public class Litwa implements PanstwoEuropejskie {
     @Override
     public void dodajSasiada(Panstwo sasiad) {
         sasiedzi.add(sasiad);
+    }
+
+    @Override
+    public void migruj(Panstwo docelowePanstwo, int liczbaMigrantow) {
+        this.liczbaLudnosci -= liczbaMigrantow;
+        docelowePanstwo.setLiczbaLudnosci(docelowePanstwo.getLiczbaLudnosci() + liczbaMigrantow);
+    }
+
+    @Override
+    public void setLiczbaLudnosci(int i) {
+        this.liczbaLudnosci = i;
     }
 }
