@@ -6,7 +6,8 @@ public class Walczaca extends Postac{
         return sila;
     }
 
-    public void atakuj(Postac postac){
+    public void atakuj(Postac postac) {
         postac.punktyZycia -= sila;
     }
 }
+
